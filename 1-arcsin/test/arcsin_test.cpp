@@ -14,4 +14,10 @@ TEST(ArcsinTest, ResultTest) {
   EXPECT_NEAR(0.0, arcsin_power(0, 15), 0.01);
   EXPECT_NEAR(M_PI / 2, arcsin_power(1, 15), 0.15);
   EXPECT_NEAR(M_PI / 2, arcsin_power(1, 10000), 0.01);
+  EXPECT_NEAR(M_PI / 6, arcsin_power(0.5, 10000), 0.01);
+}
+
+TEST(ArcsinTest, PropertyTest) {
+  double x = 0.7151;
+  EXPECT_DOUBLE_EQ(arcsin_power(x, 100), -arcsin_power(-x, 100));
 }
