@@ -1,4 +1,4 @@
-project(TpoLab1)
+project(TpoLab1-arcsin)
 
 include(FetchContent)
 FetchContent_Declare(
