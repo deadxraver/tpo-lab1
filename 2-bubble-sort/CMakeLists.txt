@@ -18,3 +18,6 @@ add_executable(
 )
 target_link_libraries(tests GTest::gtest_main bubblesort_lib)
 target_include_directories(tests PRIVATE src)
+
+enable_testing()
+add_test(BUBBLESORT_TEST tests)
