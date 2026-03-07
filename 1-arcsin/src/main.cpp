@@ -1,5 +1,3 @@
-#include "main.hpp"
-
 #include "arcsin.hpp"
 
 #include <iostream>
