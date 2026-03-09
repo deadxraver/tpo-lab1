@@ -32,4 +32,8 @@ jobs:
 
       - name: Task 3
         run: |
-          # TODO: 
+          cd 3-text
+          mkdir -p build
+          cd build
+          cmake .. && cmake --build .
+          ctest
