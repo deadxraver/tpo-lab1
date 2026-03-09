@@ -13,3 +13,15 @@ TEST(EntityTest, PersonTest) {
   EXPECT_FALSE(Person(name, abils).has_light());
   EXPECT_TRUE(Person(name, abils, true).has_light());
 }
+
+TEST(EntityTest, WhaleTest) {
+  Whale wh;
+  Land l;
+  bool before = l.is_open();
+  wh.fall(l);
+  bool after = l.is_open();
+  EXPECT_TRUE(after);
+  EXPECT_NE(before, after);
+  wh.fall(l);
+  EXPECT_EQ(after, l.is_open());
+}
